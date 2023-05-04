@@ -76,17 +76,19 @@ import random
 def fitness_function(x_values):
     x = list(x_values)
     
-    a = [[-32, -16, 0, 16, 32, -32, -16, 0, 16, 32],
-         [-32, -32, -32, -32, -32, -16, -16, -16, 32, 32, 32]]
+    a = [[-32, -16, 0, 16, 32, -32, -16, 0, 16, 32, -32, -16, 0, 16, 32, -32, -16, 0, 16, 32, -32, -16, 0, 16, 32],
+     [-32, -32, -32, -32, -32, -16, -16, -16, 32, 32, 32, -32, -32, -32, -32, -16, -16, -16, 32, 32, 32, 32, 32, 32, 32]]
+
     
     fitness_value = 0
     
     for j in range(1, 26):
-        fitness_value += 1/[j+((x[0]-a[1][j])**6)+((x[1]-a[1][j])**6)]
-        
+        fitness_value += 1/(j+(((x[0]-a[0][j-1])**6)+((x[1]-a[1][j-1])**6)))
+    
     return (0.002 + fitness_value)
 
-FIND_MAX = False
+# IS_FIFTH_FUNCTION = True
+FIND_MAX = True
 NUM_VARIABLES = 2
 MIN_RANGE = -65.536
 MAX_RANGE = 65.536
@@ -94,10 +96,10 @@ MAX_RANGE = 65.536
 # ------------------------------------------------------
 
 POPULATION_SIZE = 100
-CHROMOSOME_LENGTH = 64
+CHROMOSOME_LENGTH = 10
 MUTATION_RATE = 0.1
 ELITE_SIZE = 2
-GENERATIONS = 300
+GENERATIONS = 100
 
 
 
