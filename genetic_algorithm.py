@@ -4,10 +4,11 @@ import random
 # DE JONG'S Function 1
 # ------------------------------------------------------
 
+# The Global Minimum must be f(x) = 0 achieved when x = 0
+
 # def fitness_function(x_values):
 #     x = list(x_values)
 #     return sum(x**2 for x in x_values)
-#     # return 100*((x[0]**2)-(x[1]))**2 + (1-x[0])**2
 
 # FIND_MAX = False
 # NUM_VARIABLES = 3
@@ -20,9 +21,10 @@ import random
 # DE JONG'S Function 2
 # ------------------------------------------------------
 
+# The Global Minimum must be f(x) = 0 achieved when x = (1, ... ,1)
+
 # def fitness_function(x_values):
 #     x = list(x_values)
-#     # return sum(x**2 for x in x_values)
 #     return 100*((x[0]**2)-(x[1]))**2 + (1-x[0])**2
 
 # FIND_MAX = False
@@ -37,9 +39,6 @@ import random
 # ------------------------------------------------------
 
 # def fitness_function(x_values):
-#     x = list(x_values)
-#     # return sum(x**2 for x in x_values)
-#     # return 100*((x[0]**2)-(x[1]))**2 + (1-x[0])**2
 #     return sum(math.floor(x) for x in x_values)
 
 # FIND_MAX = False
@@ -59,10 +58,10 @@ import random
     
 #     for i in range(1, len(x)+1):
 #         fitness_value += i*x[i-1] + random.gauss(0, math.sqrt(1))
-        
+    
 #     return fitness_value
 
-# FIND_MAX = True
+# FIND_MAX = False
 # NUM_VARIABLES = 50
 # MIN_RANGE = -1.28
 # MAX_RANGE = 1.28
@@ -79,7 +78,6 @@ def fitness_function(x_values):
     a = [[-32, -16, 0, 16, 32, -32, -16, 0, 16, 32, -32, -16, 0, 16, 32, -32, -16, 0, 16, 32, -32, -16, 0, 16, 32],
      [-32, -32, -32, -32, -32, -16, -16, -16, 32, 32, 32, -32, -32, -32, -32, -16, -16, -16, 32, 32, 32, 32, 32, 32, 32]]
 
-    
     fitness_value = 0
     
     for j in range(1, 26):
@@ -87,7 +85,6 @@ def fitness_function(x_values):
     
     return (0.002 + fitness_value)
 
-# IS_FIFTH_FUNCTION = True
 FIND_MAX = True
 NUM_VARIABLES = 2
 MIN_RANGE = -65.536
@@ -99,7 +96,7 @@ POPULATION_SIZE = 100
 CHROMOSOME_LENGTH = 10
 MUTATION_RATE = 0.1
 ELITE_SIZE = 2
-GENERATIONS = 100
+GENERATIONS = 500
 
 
 
