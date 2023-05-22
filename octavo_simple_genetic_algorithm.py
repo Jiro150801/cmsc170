@@ -2,6 +2,7 @@
     CMSC 170 - ST1L | Introduction to Artificial Intelligence
     Simple Genetic Algorithm that Solves for the Five De Jong's Functions
     Programmer: John Rommel B. Octavo
+    Student Number: 2020-02667
 '''
 
 import math
