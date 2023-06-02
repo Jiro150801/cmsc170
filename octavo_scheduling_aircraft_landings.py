@@ -2,7 +2,7 @@
     CMSC 170 - ST1L | Introduction to Artificial Intelligence
     Ant Colony Optimization that Solves for the Schedulling Aircraft Landings Problem
     Programmer: John Rommel B. Octavo
-    Student Number: 2020-02667\]
+    Student Number: 2020-02667
 '''
 
 import random
